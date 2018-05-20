@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Login panel</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/LoginPanel.css') }}">
+
+</head>
+
+<body>
+     <div class="container">
+    <div class="login-container">
+            <div id="output"></div>
+            <div class="avatar"></div>
+            <div class="form-box">
+                <form action="" method="post">
+                   {{ form.hidden_tag() }}
+                    <input type="text" placeholder="Username" name="username" >
+                    <input type="password" placeholder="Password" name="password" >
+         
+                    <button class="btn btn-dark btn-block login" type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+ 
+      
+
+</body>
+</html>

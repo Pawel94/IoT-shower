@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/card2.css') }}">
+
+<script type=text/javascript src="{{url_for('static', filename='js/chart2.js') }}"></script>
+
+<div class="container-fluid" style="padding-right: 50px; padding-left: 50px;margin-top: 50px;">
+  <div class="row">
+                    <div class="col-md-3">
+                        <div class="card p-30">
+                          <h5 class="card-header">KOSZT</h5>
+                            <div class="media">
+                                <div class="media-left media-top " style="font-size:2em; color:Tomato;">
+                                   <i class="fas fa-dollar-sign" style="margin-left: 10px;font-size: 30px;height: 30px;vertical-align: middle;"></i>
+                                </div>      
+                                <div class="media-body ">
+                                    <h2>568120</h2>
+                                    <p class="m-b-0">wszystkich pryszniców</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                   <div class="col-md-3">
+                        <div class="card p-30">
+                          <h5 class="card-header">CAŁKOWITE</h5>
+                            <div class="media">
+                                <div class="media-left media-top " style="font-size:2em; color:Tomato;">
+                                   <i class="fas fa-tint" style="margin-left: 10px;font-size: 30px;height: 30px;vertical-align: middle;"></i>
+                                </div>      
+                                <div class="media-body ">
+                                    <h2>568120</h2>
+                                    <p class="m-b-0">zużycie wody</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card p-30">
+                          <h5 class="card-header">CZAS</h5>
+                            <div class="media">
+                                <div class="media-left media-top " style="font-size:2em; color:Tomato;">
+                                   <i class="fas fa-stopwatch" style="margin-left: 10px;font-size: 30px;height: 30px;vertical-align: middle;"></i>
+                                </div>      
+                                <div class="media-body ">
+                                    <h2>568120</h2>
+                                    <p class="m-b-0">wszystkich prysznców</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="col-md-3">
+                        <div class="card p-30">
+                          <h5 class="card-header">ILOŚĆ</h5>
+                            <div class="media">
+                                <div class="media-left media-top " style="font-size:2em; color:Tomato;">
+                                   <i class="fas fa-shower" style="margin-left: 10px;font-size: 30px;height: 30px;vertical-align: middle;"></i>
+                                </div>      
+                                <div class="media-body ">
+                                    <h2>568120</h2>
+                                    <p class="m-b-0">wszystkich pryszniców</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+
+
+
+
+  </div>
+
+
+  
+ <div class="row">
+          <div class="col-lg-12">
+<canvas id="lineChart"></canvas>
+
+<script type=text/javascript src="{{url_for('static', filename='js/chart2.js') }}"></script>
+          </div>
+        </div>
+
+
+
+
+
+ <div class="row">
+          <div class="col-lg-12">
+                        <div class="card" style="margin-top: 100px">
+                          <h5 class="card-header">DANE W STOSUNKU DO CAŁEGO DOMU</h5>
+                            <div class="card-body browser">
+                                <p class="f-w-600">Ile wody zużywasz w domu <span class="pull-right">85%</span></p>
+                                <div class="progress ">
+                                    <div role="progressbar" style="width: 85%; height:8px;" class="progress-bar bg-danger wow animated progress-animated"> <span class="sr-only">60% Complete</span> </div>
+                                </div>
+
+                                <p class="m-t-30 f-w-600">Ile kosztuje twój prysznic<span class="pull-right">90%</span></p>
+                                <div class="progress">
+                                    <div role="progressbar" style="width: 90%; height:8px;" class="progress-bar bg-info wow animated progress-animated"> <span class="sr-only">60% Complete</span> </div>
+                                </div>
+
+                                <p class="m-t-30 f-w-600">Ilośc pryszniców względem całego domu<span class="pull-right">65%</span></p>
+                                <div class="progress">
+                                    <div role="progressbar" style="width: 65%; height:8px;" class="progress-bar bg-success wow animated progress-animated"> <span class="sr-only">60% Complete</span> </div>
+                                </div>
+
+                                <p class="m-t-30 f-w-600">Ile litrów zużywasz<span class="pull-right">65%</span></p>
+                                <div class="progress">
+                                    <div role="progressbar" style="width: 65%; height:8px;" class="progress-bar bg-warning wow animated progress-animated"> <span class="sr-only">60% Complete</span> </div>
+                                </div>
+
+                <p class="m-t-30 f-w-600">android<span class="pull-right">65%</span></p>
+                                <div class="progress m-b-30">
+                                    <div role="progressbar" style="width: 65%; height:8px;" class="progress-bar bg-success wow animated progress-animated"> <span class="sr-only">60% Complete</span> </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+
+
+
+ </div>
+
+
+
+</div>
+
+   {% endblock %}
+

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="col-sm" style="height: 100%">panel głowny
+<div class="content-wrapper ">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Najnowsze wydarzenia</a>
+        </li>
+        <li class="breadcrumb-item active">Ostatnie</li>
+      </ol>
+    </div>
+    <div class="row">
+        <div class="card card-body  col-xl-5 col-sm-1 mb-3 ml-3" >
+            <h3 class="card-title">Ostatnie przysznice</h3>
+             <p class="card-text">Ostatni pysznic, ilość wody oraz koszty prysznicu</p>
+              <a href="#" class="btn btn-primary">Zobacz więcej</a>
+        </div>
+        <div class="card card-body  col-xl-5 col-sm-6 mb-3 ml-3">
+                <h3 class="card-title">Nowi użytkownicy</h3>
+                <p class="card-text">Dodano nowych użytkowników.</p>
+                <a href="#" class="btn btn-primary">Zobacz więcej</a>
+        </div>
+    </div>
+ </div>
+
+ <div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Najnowsze wykresy</a>
+        </li>
+        <li class="breadcrumb-item active">Ostatnia aktualizacja</li>
+      </ol>
+    </div>
+    <div class="row">
+<div class=" col-xl-5 col-sm-1 pl-3" ><canvas id="myChart" style="max-width: 700px;"></canvas></div>
+<div class=" col-xl-5 col-sm-1 pl-5" > <canvas id="pieChart" style="max-width: 500px;"></></canvas></div>
+<canvas id="lineChart"></canvas>
+</div>
+  </div>
+
+</div>
+</div>
+
+   {% endblock %}
+
