@@ -74,3 +74,9 @@ def user():
 def yourStats():
       return render_template('profile.html')
 
+
+@app.route('/allData/',methods=['GET', 'POST'])
+@login_required
+def allData():
+      return render_template('charts.html')
+

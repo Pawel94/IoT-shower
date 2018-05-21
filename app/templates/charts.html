@@ -1,0 +1,135 @@
+ 
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="content-wrapper " style="padding-right: 50px; padding-left: 50px;margin-top: 50px;">
+        <div class="row">
+                    <div class="col-lg-6">
+
+                 <div class="card">
+                                <div class="card-body">
+
+                                <h4 class="card-title">Ilość wody zużytej w prysznicach</h4>
+
+                                <canvas id="sales-chart" ></canvas>
+
+                            </div>
+                        </div>
+                   
+               </div>
+           
+    
+
+
+ <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-title">
+                                <h4>Ostatnie prysznice</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Name</th>
+                                                <th>Data</th>
+                                                <th>Ilość wody</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <td>
+                                                    <div class="round-img">
+                                                        <a href=""><img src="images/avatar/4.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>John Abraham</td>
+                                                <td><span>iBook</span></td>
+                                                <td><span>456 pcs</span></td>
+                                                <td><span class="badge badge-success">Done</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="round-img">
+                                                        <a href=""><img src="images/avatar/2.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>John Abraham</td>
+                                                <td><span>iPhone</span></td>
+                                                <td><span>456 pcs</span></td>
+                                                <td><span class="badge badge-success">Done</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="round-img">
+                                                        <a href=""><img src="images/avatar/3.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>John Abraham</td>
+                                                <td><span>iMac</span></td>
+                                                <td><span>456 pcs</span></td>
+                                                <td><span class="badge badge-warning">Pending</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="round-img">
+                                                        <a href=""><img src="images/avatar/4.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>John Abraham</td>
+                                                <td><span>iBook</span></td>
+                                                <td><span>456 pcs</span></td>
+                                                <td><span class="badge badge-success">Done</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+     
+
+
+ <div class="row">
+          <div class="col-lg-12">
+                        <div class="card" style="margin-top: 100px; padding:100px">
+                          <h5 class="card-header">PORY UŻYCIA PRYSZNICA</h5>
+                            <div class="card-body browser">
+                                
+ <p>RANO 6-8</p>
+  <div class="progress">
+               
+  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<p>POŁUDNIE 14-16</p>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<p>WIECZÓR 20-22</p>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<p>INNE</p>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+                            </div>
+                        </div>
+                      </div>
+
+
+
+ </div>
+
+</div>
+
+<script type=text/javascript src="{{url_for('static', filename='js/chart3.js') }}"></script>
+   {% endblock %}

@@ -122,4 +122,12 @@ var myRadarChart = new Chart(ctxR, {
         responsive: true
     }    
 });
+
+
+
+
+
+
+
+
             

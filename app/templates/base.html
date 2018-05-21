@@ -23,7 +23,7 @@
 </head>
 
 <body>
-  <div style="height: 100vh; background-color: rgba(255,0,0,0.1);">
+  <div style="height: 100vh;">
 
 
 
@@ -48,7 +48,7 @@
   <a class="nav-link active" href="{{ url_for('user') }}"> <i class=" fa fa-male" style="color:Tomato"></i> Zarządzanie osobami</a>
   <a class="nav-link active" href="{{ url_for('yourStats') }}"> <i class="fa fa-tint" style="color:Tomato"></i> Twój profil</a>
   <a class="nav-link active" href="waterConsumption.html"> <i class=" fa fa-bathtub" style="color:Tomato"></i> Zużycie wody</a>
-  <a class="nav-link active"href="charts.html"><i class="fa fa-line-chart" style="color:Tomato"></i> Wykresy</a>
+  <a class="nav-link active"href="{{ url_for('allData') }}"><i class="fa fa-line-chart" style="color:Tomato"></i> Wykresy</a>
   <a class="nav-link disabled" href="#"> <i class=" fa fa-wrench" style="color:Tomato"></i> Opcje dodatkowe</a>
   <a class="nav-link active" href="{{ url_for('logout') }}"> <i class="fa fa-fw fa-sign-out" style="color:Tomato"></i> Wyloguj</a>
 </nav></div>  
