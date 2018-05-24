@@ -2,7 +2,6 @@ body, html {
   height: 100%;
 }
 .row1{
-	margin: 10px;
 }
 .centered-form{
 	margin-top: 60px;
@@ -18,4 +17,5 @@ body, html {
     padding-right:0;
     padding-left:0;	
 }
+
 

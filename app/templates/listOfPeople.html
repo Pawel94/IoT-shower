@@ -6,23 +6,35 @@
 <script type=text/javascript src="{{url_for('static', filename='js/modal.js') }}"></script>
  
 
+<div class="container-fluid" style="margin-top: 20px; padding-bottom: 50px; height: 100%">
+ 
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Najnowsze wydarzenia</a>
+        </li>
+        <li class="breadcrumb-item active">Ostatnie</li>
+      </ol>
+  
 
- <div class="col-sm" style="height: 100% ">
-    Tabelka użytkowników
+ <div class="row">
+                    <div class="col-lg-12">
 
-       <div class="row">
+                 <div class="card">
+                  <h5 class="card-header">Ilość zużytej wody w poszczególnych dniach</h5>
+                                <div class="card-body">
 
     
-<div class=" col-xl-11 col-sm-1 pl-3 row1" >
 
   <table class="table table-dark ">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">ID</th>
       <th scope="col">Imię</th>
       <th scope="col">Nazwisko</th>
-      <th scope="col">email</th>
+      <th scope="col">Email/Login</th>
       <th scope="col">Ilośc wody</th>
+      <th scope="col">Rola</th>
+
     </tr>
   </thead>
   <tbody>
@@ -33,18 +45,22 @@
                   <td>{{ user.surrname }}</td>
                   <td>{{ user.email }}</td>
                   <td>{{ user.quantity }}</td>
+                  <td>musze dodac</td>
                </tr>
             {% endfor %}
   </tbody>
 </table>
 
-</div>
+
+
+<div class="row">
    <div class=" col-xl-12 col-sm-1 pl-5 pb-10 row1" >
 
   
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Dodaj użytkownika</button>
   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal2">Usuń użytkownika</button>
 
+</div>
 
 
 <!-- The Modal -->
@@ -148,7 +164,7 @@
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Usun</h4>
+        <h4 class="modal-title">Usuń</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
 
@@ -185,7 +201,7 @@
         </fieldset>
  
 </div>
-    </div><!-- /.container -->
+   <!-- /.container -->
       </div>
 
     
@@ -207,6 +223,37 @@
     
 
 </div>
+</form>
+</div>
+</div>
+</div>
+
+
+ 
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Twoje dane</a>
+        </li>
+        <li class="breadcrumb-item active">Edytuj ustawienia</li>
+      </ol>
+  
+
+ <div class="row">
+                    <div class="col-lg-12">
+
+                 <div class="card">
+                                <div class="card-body">
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+
 
 
    {% endblock %}

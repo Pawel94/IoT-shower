@@ -1,14 +1,35 @@
+<head>
+  <meta charset="utf-8" />
+  <title>Twój profil</title>
+  <!-- import plugin script -->
+
+
+</head>
+
+
 {% extends "base.html" %}
 
 {% block content %}
 
 
-<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/card2.css') }}">
 
-<script type=text/javascript src="{{url_for('static', filename='js/chart2.js') }}"></script>
 
-<div class="container-fluid" style="padding-right: 50px; padding-left: 50px;margin-top: 50px;">
+
+
+
+<script type="text/javascript" src="{{url_for('static', filename='js/chart2.js') }}" async></script>
+
+<div class="container-fluid" style="margin-top: 50px; padding-bottom: 50px;">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Statystki w liczbach</a>
+        </li>
+        <li class="breadcrumb-item active">Wszystkie pomiary brane pod uwage</li>
+      </ol>
   <div class="row">
+
+   
+   
                     <div class="col-md-3">
                         <div class="card p-30">
                           <h5 class="card-header">KOSZT</h5>
@@ -74,55 +95,66 @@
 
   </div>
 
-
-
+<br>
+ <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Statystki w liczbach</a>
+        </li>
+        <li class="breadcrumb-item active">Wszystkie pomiary brane pod uwage</li>
+      </ol>
 
 <div class="row">
-<div class="container-fluid" style="padding-right: 50px; padding-left: 50px;margin-top: 50px;">
+<div class="container-fluid" style="margin-top: 25px;">
   
+   
 <div class="card mb-3">
         <div class="card-header" style="font-size:2em;">
           <i class="fa fa-area-chart" style="color:Tomato;" ></i> Wykres </div>
         <div class="card-body">
-          <canvas id="lineChart" width="100%" height="30"></canvas>
+          <canvas id="myChart1" width="100%" height="50"></canvas>
         </div>
         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 
-<script type=text/javascript src="{{url_for('static', filename='js/chart2.js') }}"></script>
       </div>
   </div>
 </div>
 
 
+
+<ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Statystki w liczbach</a>
+        </li>
+        <li class="breadcrumb-item active">Wszystkie pomiary brane pod uwage</li>
+      </ol>
+
  <div class="row">
+      
           <div class="col-lg-12">
-                        <div class="card" style="margin-top: 100px">
-                          <h5 class="card-header">DANE W STOSUNKU DO CAŁEGO DOMU</h5>
+                        <div class="card" style="margin-top: 50px">
+                          <h5 class="card-header">DANE PROCENTOWE</h5>
                             <div class="card-body browser">
-                                <p class="f-w-600">Ile wody zużywasz w domu <span class="pull-right">85%</span></p>
+                                <p class="f-w-600">Ile wody zużywasz w domu <span class="pull-right">{{procentWoda}}%</span></p>
                                 <div class="progress ">
-                                    <div role="progressbar" style="width: 85%; height:8px;" class="progress-bar bg-danger wow animated progress-animated"> <span class="sr-only">60% Complete</span> </div>
+                                    <div role="progressbar" style="width: {{procentWoda}}%; height:8px;" class="progress-bar bg-danger wow animated progress-animated"> <span class="sr-only">{{procentWoda}}% Complete</span> </div>
                                 </div>
 
-                                <p class="m-t-30 f-w-600">Ile kosztuje twój prysznic<span class="pull-right" class="counter-count">90%</span></p>
+                                <p class="m-t-30 f-w-600">Ile kosztuje twój prysznic<span class="pull-right" class="counter-count">{{procentCena}}%</span></p>
                                 <div class="progress">
-                                    <div role="progressbar" style="width: 90%; height:8px;" class="progress-bar bg-info wow animated progress-animated"> <span class="sr-only">60% Complete</span> </div>
+                                    <div role="progressbar" style="width: {{procentCena}}%; height:8px;" class="progress-bar bg-info wow animated progress-animated"> <span class="sr-only">{{procentCena}}% Complete</span> </div>
                                 </div>
 
-                                <p class="m-t-30 f-w-600">Ilośc pryszniców względem całego domu<span class="pull-right">65%</span></p>
+                                <p class="m-t-30 f-w-600">Ilośc pryszniców względem całego domu<span class="pull-right">{{procentIlosc}}%</span></p>
                                 <div class="progress">
-                                    <div role="progressbar" style="width: 65%; height:8px;" class="progress-bar bg-success wow animated progress-animated"> <span class="sr-only">60% Complete</span> </div>
+                                    <div role="progressbar" style="width:{{procentIlosc}}% ; height:8px;" class="progress-bar bg-success wow animated progress-animated"> <span class="sr-only">{{procentIlosc}}% Complete</span> </div>
                                 </div>
 
-                                <p class="m-t-30 f-w-600">Ile litrów zużywasz<span class="pull-right">65%</span></p>
+                                <p class="m-t-30 f-w-600">Ile litrów zużywasz<span class="pull-right">{{procentLitry}}%</span></p>
                                 <div class="progress">
-                                    <div role="progressbar" style="width: 65%; height:8px;" class="progress-bar bg-warning wow animated progress-animated"> <span class="sr-only">60% Complete</span> </div>
+                                    <div role="progressbar" style="width: {{procentLitry}}%; height:8px;" class="progress-bar bg-warning wow animated progress-animated"> <span class="sr-only">{{procentLitry}}% Complete</span> </div>
                                 </div>
 
-                <p class="m-t-30 f-w-600">android<span class="pull-right">65%</span></p>
-                                <div class="progress m-b-30">
-                                    <div role="progressbar" style="width: 65%; height:8px;" class="progress-bar bg-success wow animated progress-animated"> <span class="sr-only">60% Complete</span> </div>
-                                </div>
+                
                             </div>
                         </div>
                       </div>
@@ -134,6 +166,76 @@
 
 
 </div>
+
+
+
+<script>
+      
+      var chartData = {
+        labels : [{% for item in labels %}
+                   "{{item}}",
+                  {% endfor %}],
+        datasets : [{
+            label: '{{ legend }}',
+            fill: true,
+            lineTension: 0.1,
+            backgroundColor: "rgba(75,192,192,0.4)",
+            borderColor: "rgba(75,192,192,1)",
+            borderCapStyle: 'butt',
+            borderDash: [],
+            borderDashOffset: 0.0,
+            borderJoinStyle: 'miter',
+            pointBorderColor: "rgba(75,192,192,1)",
+            pointBackgroundColor: "#fff",
+            pointBorderWidth: 1,
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: "rgba(75,192,192,1)",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointHoverBorderWidth: 2,
+            pointRadius: 1,
+            pointHitRadius: 10,
+            data : [{% for item in values %}
+                   "{{item}}",
+                  {% endfor %}],
+            spanGaps: false
+        }]
+      }
+
+      // get chart canvas
+      var holder = document.getElementById("myChart1");
+      var ctx = document.getElementById("myChart1").getContext("2d");
+
+      // create the chart using the chart canvas
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: chartData,
+        options: {
+          tooltips: {
+            enabled: true,
+            mode: 'single',
+            callbacks: {
+              label: function(tooltipItems, data) {
+                       return tooltipItems.yLabel + ' litrów wody';
+                     }
+            }
+          },
+        }
+      });
+
+      // get the text element below the chart
+      var pointSelected = document.getElementById("pointSelected");
+
+      // create a callback function for updating the selected index on the chart
+      holder.onclick = function(evt){
+        var activePoint = myChart.getElementAtEvent(evt);
+        console.log(activePoint);
+        console.log('x:' + activePoint[0]._view.x);
+        console.log('maxWidth: ' + activePoint[0]._xScale.maxWidth);
+        console.log('y: ' + activePoint[0]._view.y);
+        console.log('index: ' + activePoint[0]._index);
+        pointSelected.innerHTML = 'Point selected... index: ' + activePoint[0]._index;
+      };
+    </script>
 
    {% endblock %}
 

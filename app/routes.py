@@ -1,30 +1,27 @@
-from flask import render_template, flash, redirect, url_for, request
+from flask import render_template, flash, redirect, url_for, request, jsonify
 from flask_login import login_user, logout_user, current_user, login_required
 from werkzeug.urls import url_parse
 from app import app, db
 from app.forms import LoginForm, RegistrationForm,delete
 from app.models import User
+import json
 
+@app.context_processor
+def inject_user():
+
+    user_c=current_user.username
+    return dict(user_c=user_c)
 
 @app.route('/')
-@app.route('/index')
+@app.route('/index', methods=['GET', 'POST'])
 @login_required
-def index():
-    posts = [
-        {
-            'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
-        },
-        {
-            'author': {'username': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
-        }
-    ]
-    return render_template('index.html', title='Home', posts=posts)
+def index():   
+    return render_template('index.html', title='Home')
 
 
 @app.route('/LoginPanel', methods=['GET', 'POST'])
 def login():
+    current_user.username=""
     if current_user.is_authenticated:
         return redirect(url_for('index'))
     form = LoginForm()
@@ -57,7 +54,7 @@ def user():
         db.session.add(user)
         db.session.commit()
         flash('Congratulations, you are now a registered user!')
-        return redirect(url_for('index'))
+        return redirect(url_for('index.html'))
     if form2.validate_on_submit():
        option = request.form['id']
        obj = User.query.filter_by(id=option).one()
@@ -72,11 +69,26 @@ def user():
 @app.route('/yourStats/',methods=['GET', 'POST'])
 @login_required
 def yourStats():
-      return render_template('profile.html')
+    legend = 'Monthly Data'
+    dniLiniowy = ["January", "February", "March", "April", "May", "June", "July", "August"]
+    iloscLiniowy = [10, 9, 8, 7, 6, 4, 7, 18]
+    procentWoda=60
+    procentCena=70
+    procentIlosc=80
+    procentLitry=90
+
+    return render_template('profile.html', values=iloscLiniowy, labels=dniLiniowy,procentWoda=procentWoda,procentIlosc=procentIlosc,procentLitry=procentLitry,procentCena=procentCena)
 
 
 @app.route('/allData/',methods=['GET', 'POST'])
 @login_required
 def allData():
-      return render_template('charts.html')
+    result ="result"
+
+    osoby=[]
+    for id in User.query.all():
+        osoby.append(id.username)
+    legend = 'Monthly Data'
+    iloscLitrow = [10, 20, 50, 20]
+    return render_template('charts.html',osoby=osoby)
 

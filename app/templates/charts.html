@@ -3,14 +3,108 @@
 
 {% block content %}
 
-<div class="content-wrapper " style="padding-right: 50px; padding-left: 50px;margin-top: 50px;">
+
+
+<div class="content-wrapper " style="width: 100%; margin-top: 50px; padding-bottom: 50px;">
+
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Statystki w liczbach</a>
+        </li>
+        <li class="breadcrumb-item active">Wszystkie pomiary brane pod uwage</li>
+      </ol>
+   
+
+
+
+<div class="row" style="margin-bottom:50px; ">
+
+
+
+                    <div class="col-md-3">
+                        <div class="card p-30">
+                          <h5 class="card-header">KOSZT</h5>
+                            <div class="media">
+                                <div class="media-left media-top " style="font-size:2em; color:Tomato;">
+                                   <i class="fas fa-dollar-sign" style="margin-left: 10px;font-size: 30px;height: 30px;vertical-align: middle;"></i>
+                                </div>      
+                                <div class="media-body "><center>
+                                    <h2 class="counter-count">50</h2>
+                                    <p class="m-b-0">wszystkich pryszniców</p></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                   <div class="col-md-3">
+                        <div class="card p-30">
+                          <h5 class="card-header">CAŁKOWITE</h5>
+                            <div class="media">
+                                <div class="media-left media-top " style="font-size:2em; color:Tomato;">
+                                   <i class="fas fa-tint" style="margin-left: 10px;font-size: 30px;height: 30px;vertical-align: middle;"></i>
+                                </div>      
+                                <div class="media-body "><center>
+                                    <h2 class="counter-count">568</h2>
+                                    <p class="m-b-0">zużycie wody</p></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card p-30">
+                          <h5 class="card-header">CZAS</h5>
+                            <div class="media">
+                                <div class="media-left media-top " style="font-size:2em; color:Tomato;">
+                                   <i class="fas fa-stopwatch" style="margin-left: 10px;font-size: 30px;height: 30px;vertical-align: middle;"></i>
+                                </div>      
+                                <div class="media-body "><center>
+                                    <h2 class="counter-count">12</h2>
+                                    <p class="m-b-0">wszystkich prysznców</p></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="col-md-3">
+                        <div class="card p-30">
+                          <h5 class="card-header">ILOŚĆ</h5>
+                            <div class="media">
+                                <div class="media-left media-top " style="font-size:2em; color:Tomato;">
+                                   <i class="fas fa-shower" style="margin-left: 10px;font-size: 30px;height: 30px;vertical-align: middle;"></i>
+                                </div>      
+                                <div class="media-body "><center>
+                                    <h2 class="counter-count" >20</h2>
+                                    <p class="m-b-0">wszystkich pryszniców</p></center>
+                                </div>
+                            </div>
+                        </div>
+                    
+               
+</div>
+
+
+
+  </div>
+
+
+ <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Statystki w liczbach</a>
+        </li>
+        <li class="breadcrumb-item active">Wykresy funkcji linowej oraz wykres kołowy </li>
+      </ol>
+
+
         <div class="row">
                     <div class="col-lg-6">
 
                  <div class="card">
+                    
+                          <h5 class="card-header">Ilość zużytej wody w poszczególnych dniach</h5>
                                 <div class="card-body">
 
-                                <h4 class="card-title">Ilość wody zużytej w prysznicach</h4>
 
                                 <canvas id="sales-chart" ></canvas>
 
@@ -24,6 +118,158 @@
 
  <div class="col-lg-6">
                         <div class="card">
+                           
+                          <h5 class="card-header">Pory korzystania z prysznica</h5>
+                            
+                            <div class="card-body">
+                               
+                                <h4 class="card-title">Pory dnia</h4>
+                                <canvas id="godziny"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+     
+
+ <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Statystki w liczbach</a>
+        </li>
+        <li class="breadcrumb-item active">Pomiary średnie </li>
+      </ol>
+
+
+<div class="row" style="margin-bottom:50px; margin-top: 50px ">
+
+
+
+                    <div class="col-md-3">
+                        <div class="card p-30">
+                          <h5 class="card-header text-info">KOSZT ŚREDNI</h5>
+                            <div class="media">
+                                <div class="media-left media-top " style="font-size:2em; color:Tomato;">
+                                   <i class="fas fa-dollar-sign" style="margin-left: 10px;font-size: 30px;height: 30px;vertical-align: middle;"></i>
+                                </div>      
+                                <div class="media-body media-left " ><center>
+                                    <h2 class="counter-count text-tomato">50</h2>
+                                    <i><p class="m-b-0 text-info">wszystkich pryszniców</p></i></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                   <div class="col-md-3">
+                        <div class="card p-30">
+                          <h5 class="card-header">ŚREDNIE ZUŻYCIE</h5>
+                            <div class="media">
+                                <div class="media-left media-top " style="font-size:2em; color:Tomato;">
+                                   <i class="fas fa-tint" style="margin-left: 10px;font-size: 30px;height: 30px;vertical-align: middle;"></i>
+                                </div>      
+                                <div class="media-body "><center>
+                                    <h2 class="counter-count">568</h2>
+                                    <p class="m-b-0">wody w ciągu jednej kąpieli</p></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card p-30">
+                          <h5 class="card-header">ŚREDNI CZAS</h5>
+                            <div class="media">
+                                <div class="media-left media-top " style="font-size:2em; color:Tomato;">
+                                   <i class="fas fa-stopwatch" style="margin-left: 10px;font-size: 30px;height: 30px;vertical-align: middle;"></i>
+                                </div>      
+                                <div class="media-body "><center>
+                                    <h2 class="counter-count">12</h2>
+                                    <p class="m-b-0">kąpieli</p></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="col-md-3">
+                        <div class="card p-30">
+                          <h5 class="card-header">ŚREDNIa ILOŚĆ</h5>
+                            <div class="media">
+                                <div class="media-left media-top " style="font-size:2em; color:Tomato;">
+                                   <i class="fas fa-shower" style="margin-left: 10px;font-size: 30px;height: 30px;vertical-align: middle;"></i>
+                                </div>      
+                                <div class="media-body "><center>
+                                    <h2 class="counter-count" >20</h2>
+                                    <p class="m-b-0">pryszniców w ciągu tygodnia</p></center>
+                                </div>
+                            </div>
+                        </div>
+                    
+               
+</div>
+
+
+
+  </div>
+
+
+<br>
+
+ <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Statystki w liczbach</a>
+        </li>
+        <li class="breadcrumb-item active">Tabele oraz wykres słupkowy </li>
+      </ol>
+     <div class="row">
+                    <div class="col-lg-12">
+
+                 <div class="card">
+
+                                <div class="card-body">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#home"><i class="fas fa-align-left"></i> Wykres słupkowy</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu1"><i class="fas fa-table"></i> Tabela</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+    </li>
+  </ul>
+
+
+
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="home" class="container tab-pane active"><br>
+      <h5 class="card-header">Najczęściej korzystające osoby z prysznica</h5>
+                            <div class="card-body browser">
+                                
+ <p>Imie</p>
+  <div class="progress">
+               
+  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<p>Imie</p>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<p>Imie</p>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<p>Imie</p>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+                            </div>
+    </div>
+    <div id="menu1" class="container tab-pane fade"><br>
+        <div> <div class="card">
                             <div class="card-title">
                                 <h4>Ostatnie prysznice</h4>
                             </div>
@@ -74,7 +320,7 @@
                                                 <td><span>456 pcs</span></td>
                                                 <td><span class="badge badge-warning">Pending</span></td>
                                             </tr>
-                                            <tr>
+                                             <tr>
                                                 <td>
                                                     <div class="round-img">
                                                         <a href=""><img src="images/avatar/4.jpg" alt=""></a>
@@ -92,44 +338,140 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-     
-
-
- <div class="row">
-          <div class="col-lg-12">
-                        <div class="card" style="margin-top: 100px; padding:100px">
-                          <h5 class="card-header">PORY UŻYCIA PRYSZNICA</h5>
-                            <div class="card-body browser">
-                                
- <p>RANO 6-8</p>
-  <div class="progress">
-               
-  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <div id="menu2" class="container tab-pane fade"><br>
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+  </div>
 </div>
-<p>POŁUDNIE 14-16</p>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<p>WIECZÓR 20-22</p>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<p>INNE</p>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 
-                            </div>
-                        </div>
-                      </div>
 
-
-
- </div>
-
+{{osoby}}%
 </div>
-
 <script type=text/javascript src="{{url_for('static', filename='js/chart3.js') }}"></script>
+
+<script>
+    
+
+    $('#myTab a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
+var ctx1 = document.getElementById( "godziny" );
+    ctx1.height = 150;
+
+
+var myChart1 =new Chart(ctx1, {
+    type: 'pie',
+    data: {
+      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+      datasets: [{
+        label: "Population (millions)",
+        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+        data: [2478,5267,734,784,433]
+      }]
+    },
+    options: {
+
+            responsive: true,
+    
+    
+         animation: {
+           segmentShowStroke : false,
+                 animateScale : true
+    }
+}
+});
+
+
+
+var ctx = document.getElementById( "sales-chart" );
+    ctx.height = 150;
+    var myChart = new Chart( ctx, {
+        type: 'line',
+        data: {
+            labels: [ "2010", "2011", "2012", "2013", "2014", "2015", "2016" ],
+            type: 'line',
+            defaultFontFamily: 'Montserrat',
+            datasets: [ {
+                label: "Foods",
+                data: [ 0, 30, 10, 120, 50, 63, 10 ],
+                backgroundColor: 'transparent',
+                borderColor: 'rgba(220,53,69,0.75)',
+                borderWidth: 3,
+                pointStyle: 'circle',
+                pointRadius: 5,
+                pointBorderColor: 'transparent',
+                pointBackgroundColor: 'rgba(220,53,69,0.75)',
+                    }, {
+                label: "Electronics",
+                data: [ 0, 50, 40, 80, 40, 79, 120 ],
+                backgroundColor: 'transparent',
+                borderColor: 'rgba(40,167,69,0.75)',
+                borderWidth: 3,
+                pointStyle: 'circle',
+                pointRadius: 5,
+                pointBorderColor: 'transparent',
+                pointBackgroundColor: 'rgba(40,167,69,0.75)',
+                    } ]
+        },
+        options: {
+            responsive: true,
+
+            tooltips: {
+                mode: 'index',
+                titleFontSize: 12,
+                titleFontColor: '#000',
+                bodyFontColor: '#000',
+                backgroundColor: '#fff',
+                titleFontFamily: 'Montserrat',
+                bodyFontFamily: 'Montserrat',
+                cornerRadius: 3,
+                intersect: false,
+            },
+            legend: {
+                display: false,
+                labels: {
+                    usePointStyle: true,
+                    fontFamily: 'Montserrat',
+                },
+            },
+            scales: {
+                xAxes: [ {
+                    display: true,
+                    gridLines: {
+                        display: false,
+                        drawBorder: false
+                    },
+                    scaleLabel: {
+                        display: false,
+                        labelString: 'Month'
+                    }
+                        } ],
+                yAxes: [ {
+                    display: true,
+                    gridLines: {
+                        display: false,
+                        drawBorder: false
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Value'
+                    }
+                        } ]
+            },
+            title: {
+                display: false,
+                text: 'Normal Legend'
+            }
+        }
+    } );
+
+
+
+    </script>
    {% endblock %}
